@@ -52,8 +52,14 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
+            ul{
+                padding: 0;    
+            }
             li{
-                list-style: none;
+                list-style: none;                
+            }
+            li a{
+                transition: color .2s linear .2s;
             }
             li:hover a{
                 color: lightgray;
