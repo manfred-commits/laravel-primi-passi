@@ -40,7 +40,7 @@ Route::get('/',function(){
     return view('home',$data);
 });
 
-Route::get('chi-siamo', function(){
+Route::get('/chi-siamo', function(){
     $data= [
         'nav'=>[
             [
@@ -64,4 +64,30 @@ Route::get('chi-siamo', function(){
         ]
     ];
     return view('chi-siamo',$data);
+});
+
+Route::get('/contatti', function(){
+    $data= [
+        'nav'=>[
+            [
+                'title'=>'Home',
+                'link'=>'http://127.0.0.1:8000/'
+
+            ],
+            [
+                'title'=>'Chi Siamo',
+                'link'=>'http://127.0.0.1:8000/chi-siamo'
+
+            ],
+        ],
+        'info'=>[
+            [
+                'address'=>'Via Benedetto Benedetti 23, 20100, Milano, Italia',
+                'phoneNumber'=>'+390291537134',
+                'email'=>'gray@gray.com'
+
+            ],
+        ]
+    ];
+    return view('contatti',$data);
 });
