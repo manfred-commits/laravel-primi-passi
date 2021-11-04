@@ -39,3 +39,29 @@ Route::get('/',function(){
     ];
     return view('home',$data);
 });
+
+Route::get('chi-siamo', function(){
+    $data= [
+        'nav'=>[
+            [
+                'title'=>'Home',
+                'link'=>'http://127.0.0.1:8000/'
+
+            ],
+            [
+                'title'=>'Contatti',
+                'link'=>'http://127.0.0.1:8000/contatti'
+
+            ],
+        ],
+        'info'=>[
+            [
+                'name'=>'Mr.Gray',
+                'img'=>'https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+                'description'=>'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae labore atque maxime magnam quo, quaerat consequuntur similique, reiciendis aut numquam in? Distinctio quidem praesentium architecto assumenda! Labore soluta beatae molestias?'
+
+            ],
+        ]
+    ];
+    return view('chi-siamo',$data);
+});
