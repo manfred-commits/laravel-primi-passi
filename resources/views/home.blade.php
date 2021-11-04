@@ -7,6 +7,17 @@
         <title>Laravel-primi-passi</title>
     </head>
     <body>
-        <h1>Hello World</h1>
+        
+        <nav>
+            <ul>
+                @foreach ($nav as $element)
+                <li>                    
+                    <a href="{{$element['link']}}">
+                        {{$element['title']}}
+                    </a>
+                </li>                    
+                @endforeach
+            </ul>
+        </nav>
     </body>
 </html>

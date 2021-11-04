@@ -18,5 +18,24 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/',function(){
-    return view('home');
+    $data= [
+        'nav'=>[
+            [
+                'title'=>'Home',
+                'link'=>'http://127.0.0.1:8000/'
+
+            ],
+            [
+                'title'=>'Chi Siamo',
+                'link'=>'http://127.0.0.1:8000/chi-siamo'
+
+            ],
+            [
+                'title'=>'Contatti',
+                'link'=>'http://127.0.0.1:8000/contatti'
+
+            ],
+        ]
+    ];
+    return view('home',$data);
 });
